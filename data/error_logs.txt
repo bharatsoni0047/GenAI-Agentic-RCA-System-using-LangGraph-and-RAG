@@ -1,0 +1,14 @@
+Error Type: Database Connection Timeout
+Root Cause: Database server was overloaded and not responding within timeout.
+Impact: Application failed to fetch user data.
+Fix: Increase connection pool size and optimize queries.
+
+Error Type: Memory Leak
+Root Cause: Objects were not released properly in the service.
+Impact: Gradual increase in memory usage leading to crash.
+Fix: Identify leaking objects and apply garbage collection.
+
+Error Type: API Latency High
+Root Cause: External API response time increased.
+Impact: Slow application performance.
+Fix: Implement caching and retry mechanism.
