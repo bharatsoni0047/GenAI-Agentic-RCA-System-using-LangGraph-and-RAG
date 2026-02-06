@@ -71,10 +71,10 @@ uvicorn main:app --reload
 
 ## ▶️ 7. Usage
 
--Start the FastAPI server
--Send an error or incident description via API
--The system returns:
--Root Cause
--Impact
--Recommended Fix
--Use the response for faster debugging and incident resolution
+- Start the FastAPI server
+- Send an error or incident description via API
+- The system returns:
+- Root Cause
+- Impact
+- Recommended Fix
+- Use the response for faster debugging and incident resolution
