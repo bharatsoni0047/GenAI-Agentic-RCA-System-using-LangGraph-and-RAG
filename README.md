@@ -1,85 +1,80 @@
-🚀 RCA Agent – Agentic Root Cause Analysis System (LangGraph + RAG)
+# 🚀 GenAI Agentic RCA System (LangGraph + RAG)
 
-An AI-powered Root Cause Analysis (RCA) Agent built using LangGraph, LangChain, ChromaDB, and FastAPI.
-The system analyzes system or application errors and automatically generates Root Cause, Impact, and Fix recommendations using Retrieval-Augmented Generation (RAG).
+---
 
-This project demonstrates real-world GenAI engineering, including agent orchestration, stateful workflows, vector search, and API-based integration.
+## 📌 1. Project Title
+**GenAI Agentic RCA System using LangGraph and RAG**
 
-📌 Problem Statement
+---
 
-In large-scale and distributed systems, identifying the true root cause of failures is often:
+## 📖 2. Description
+This project is an **AI-powered Root Cause Analysis (RCA) system**.
 
-• Time-consuming
-• Dependent on manual log analysis
-• Prone to human error
+It takes system errors or incident descriptions as input and automatically:
+- Finds the **root cause**
+- Explains the **impact**
+- Suggests the **best possible fix**
 
-Traditional monitoring and alerting tools typically:
-• Show what failed
-• But rarely explain why it failed or how to fix it
+The system is built using **agent-based workflows** and **Retrieval-Augmented Generation (RAG)** to ensure reliable and grounded AI responses.
 
-As systems grow in complexity, this gap becomes a major bottleneck for SRE and DevOps teams.
+---
 
-💡 Solution Overview
+## ✨ 3. Features
+- 🤖 AI agent for automated root cause analysis  
+- 🔍 Searches past incidents using semantic search  
+- 🧠 Uses LLMs to generate clear RCA insights  
+- 🔁 Agent validation and retry mechanism  
+- 🌐 REST API support using FastAPI  
+- 📊 Agentic workflow orchestration with LangGraph  
 
-This project addresses the problem by building an intelligent, agentic RCA system that:
+---
 
-• Understands error descriptions in natural language
-• Retrieves relevant historical incidents and logs using semantic search
-• Reasons over retrieved context using an LLM
-• Produces structured, human-readable RCA insights
+## 🛠️ 4. Tech Stack
+- **Python** – Core programming language  
+- **LangGraph** – Agent workflow orchestration  
+- **LangChain** – LLM and retrieval management  
+- **ChromaDB** – Vector database for semantic search  
+- **FastAPI** – API framework  
+- **RAG (Retrieval-Augmented Generation)** – Grounded AI responses  
 
-The result is a production-style AI agent that assists engineers in faster and more reliable incident analysis.
+---
 
-✅ What This Project Does
 
-• Accepts system or application error descriptions as input
-• Retrieves semantically similar historical incidents using ChromaDB
-• Uses an LLM to generate:
-– Root Cause
-– Impact
-– Recommended Fix
-• Validates output quality and retries when responses are insufficient
-• Exposes results through a FastAPI REST endpoint for easy integration
+## 🗂️ 5. Project Structure
+##GenAI-Agentic-RCA-System/
 
-🧠 System Architecture (High Level)
+│── data/ # Logs, sample incidents, datasets
+│── rca_agent/ # Agent logic and workflows
+│── main.py # FastAPI application entry point
+│── requirements.txt # Project dependencies
+│── README.md # Project documentation
 
-User / UI
-↓
-FastAPI REST Endpoint
-↓
-LangGraph Agent Workflow
-• Retrieval (ChromaDB + Embeddings)
-• Reasoning (LLM)
-• Validation
-• Retry Logic
-↓
-Structured RCA Response (JSON)
+---
 
-🧩 Key Components
+## ⚙️ 6. Installation
+### Step 1: Clone the repository
 
-• LangGraph for stateful, graph-based agent orchestration
-• LangChain for retrieval and LLM coordination
-• ChromaDB for vector-based semantic search over incident logs
-• FastAPI for exposing the RCA agent as a production-ready API
-• Retry & validation logic to ensure response quality
+git clone https://github.com/bharatsoni0047/GenAI-Agentic-RCA-System-using-LangGraph-and-RAG.git
+cd GenAI-Agentic-RCA-System-using-LangGraph-and-RAG
 
-🎯 Use Cases
+### Step 2: Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate    # Windows: venv\Scripts\activate
 
-• Incident root cause analysis for SRE teams
-• Faster debugging of production failures
-• AI-assisted log and incident investigation
-• Prototyping self-healing or autonomous ops systems
-• Demonstrating agentic GenAI patterns in real-world scenarios
+### Step 3: Install dependencies
+pip install -r requirements.txt
 
-🌟 Project Highlights
+### Step 4: Run the application
+uvicorn main:app --reload
 
-• Agentic, state-driven workflow using LangGraph
-• Retrieval-Augmented Generation for grounded reasoning
-• Automatic validation and retry mechanism
-• Clean API-first design for UI or tool integration
-• Production-oriented architecture
+---
 
-🏁 Summary
+## ▶️ 7. Usage
 
-This project showcases how agentic AI systems can be applied to real operational problems.
-By combining retrieval, reasoning, and structured workflows, the RCA Agent demonstrates a scalable approach to building intelligent systems for incident analysis and decision support.
+-Start the FastAPI server
+-Send an error or incident description via API
+-The system returns:
+-Root Cause
+-Impact
+-Recommended Fix
+-Use the response for faster debugging and incident resolution
